@@ -909,7 +909,7 @@
             <span ng-if="(_unit = entityUnit(item, entity))"
                   class="item-entity--unit" ng-bind="_unit"></span>
          </div>
-
+         <div class="slider-value">{{_c.value}}</div>
          <div class="item-slider" ng-if="(_c = getSliderConf(item, entity))">
             <input type="range" ng-model="_c.value"
                    ng-change="sliderChanged(item, entity, _c)"
