@@ -31,11 +31,13 @@
       var suffix = location.protocol === "file:" ? "" : "?r=" + Math.random();
 
       [
-         'styles/main.css',
-         'styles/themes.css',
-         'styles/weather-icons.css',
-         'styles/color-picker.min.css',
-         'styles/custom.css',
+         // 'styles/main.css',
+         // 'styles/themes.css',
+         // 'styles/weather-icons.css',
+         // 'styles/color-picker.min.css',
+         // 'styles/custom.css',
+         'https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;900&display=swap',
+         'styles/kanni.css'
       ].map(function (value) {
          document.write('<li'+'nk rel="stylesheet" href="'+value+suffix+'"/>');
       });
