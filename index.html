@@ -508,7 +508,8 @@
 <!-- TILE TEMPLATE -->
 
 <script type="text/ng-template" id="tile.html">
-   <div ng-style="itemStyles(page, item, entity)" class="item"
+   <div ng-style="itemStyles(page, item, entity)" 
+         class="item item--{{item.type}}"
         ng-click="entityClick(page, item, entity)"
         hm-press="entityLongPress($event, page, item, entity)"
         hm-recognizer-options="{time: 600}"
@@ -891,12 +892,9 @@
          </div>
       </div>
 
-      <div ng-if="item.type === TYPES.SCENE"
-           class="item-entity-container">
-
+      <div ng-if="item.type === TYPES.SCENE" class="item-entity-container ">
          <div class="item-entity">
-            <span class="item-entity--icon mdi"
-                  ng-class="entityIcon(item, entity)"></span>
+            <span class="item-entity--icon mdi" ng-class="entityIcon(item, entity)"></span>
          </div>
       </div>
 

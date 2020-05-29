@@ -39,6 +39,7 @@ body {
 .page {
 	display: flex;
 	flex-direction: row;
+	flex-wrap: wrap;
 	background-image: none !important;
 }
 
@@ -123,7 +124,10 @@ body {
 	text-align: center;
 }
 
-
+/* .item--scene {
+	background-color: var(--color-card-red);
+	color: var(--color-background);
+} */
 
 /* style the range input */
 
@@ -167,4 +171,18 @@ input[type=range]::-webkit-slider-thumb {
 
 .-on input[type=range]::-webkit-slider-thumb {
 	background: var(--color-background);
+}
+
+
+.-th-sensor.-on {
+	background-color: var(--color-card-red);
+}
+
+.-th-sensor .item-title{
+	transform: translateY(50%);
+	bottom: 50%;
+	padding-left: var(--global-padding);
+	padding-right: var(--global-padding);
+	line-height: 1.3;
+	
 }
