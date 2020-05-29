@@ -557,14 +557,15 @@
               class="item-background" ng-style="trackerBg(entity)"></div>
       </div>
 
-      <div ng-if="item.type === TYPES.SENSOR"
-           class="item-entity-container">
-         <div class="item-entity">
-            <span ng-bind="entityValue(item, entity)"
-                  class="item-entity--value"></span>
-
-            <span ng-if="(_unit = entityUnit(item, entity))"
-                  class="item-entity--unit" ng-bind="_unit"></span>
+      <div ng-if="item.type === TYPES.SENSOR" class="item-entity-container">
+         <div ng-if="item.id.includes('temperature')" 
+         >
+            <div class="item-entity-temperature" ng-class="{'hot': entityValue(item, entity) > 32,'warm': entityValue(item, entity) > 25, 'moderate': entityValue(item, entity) > 10, 'cold': entityValue(item, entity) < 10,}">
+               <span ng-bind="entityValue(item, entity)" class="item-entity--value"></span>
+               <span ng-if="(_unit = entityUnit(item, entity))" class="item-entity--unit" ng-bind="_unit"></span>
+            </div>
+         </div>
+         <div ng-if="! item.id.includes('temperature')">
          </div>
       </div>
 
